@@ -1,5 +1,3 @@
-`use strict`
-
 let items = {
     cart: []
 };
@@ -15,7 +13,7 @@ const addItem = () => {
 const showCart = () => {
     let cartItems = document.getElementById ("cartItems")
     let currentItem = ""
-    if (items.cart === "") {
+    if (items.cart == "") {
         cartItems.innerHTML = "<b>No Items in Cart</b>";
     }
     else {
