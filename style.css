@@ -1,0 +1,16 @@
+
+
+body {
+    background-color: rgb(13, 199, 171);
+    color: rgb(255, 255, 255);
+}
+button {
+    padding: 4px 6px;
+    cursor: pointer;
+}
+
+#cartItems {
+    background-color: rgb(115, 76, 255);
+    border-radius: 3px;
+    display: inline-block;
+}
