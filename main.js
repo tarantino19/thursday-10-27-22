@@ -1,13 +1,25 @@
-let items = {
-    cart: []
-};
+
+let items;
+items = JSON.parse(sessionStorage.getItem ("items"));
+//make sure to debug
+
+if ((items = JSON.parse(sessionStorage.getItem ("items"))) == null) {
+    items = {
+        cart: [ ],
+    };
+    // showCart();
+}
+    else {
+    items = JSON.parse(sessionStorage.getItem ("items"));
+    // showCart();
+}
 
 const addItem = () => {
     const inputItem = document.getElementById ("addItem").value;
     const inputPrice = Number(document.getElementById ("addPrice").value);
     items.cart.push ({item: inputItem, price: inputPrice})
     showCart ()
-    localStorage.setItem ("items", JSON.stringify (items))
+    sessionStorage.setItem ("items", JSON.stringify (items))
 }
 
 const showCart = () => {
@@ -26,5 +38,9 @@ const showCart = () => {
     }
 }
 showCart ()
+
+
+
+
 
 
